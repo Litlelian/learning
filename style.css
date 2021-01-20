@@ -1,0 +1,47 @@
+body {
+	position: absolute;
+}
+
+header{
+	text-align: center;
+	font-family: "Microsoft JhengHei";
+}
+
+header h1 {
+	font-size: 100px;
+	color: white;
+	background: black;
+}
+
+header h3{
+	font-size: 40px;
+	color: red;
+}
+
+.background img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;	
+	z-index: -999;
+}
+
+.grid {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 5% 20% 50% 20% 5%;
+	z-index: 1;
+}
+
+.box {
+	background-color: #A92EE6;
+	color: black;
+	border-radius: 10px;
+	border: 2px white solid;
+}
+
+.b1 {
+	grid-area: 2 / 2 / span 1 / span 1;
+}
+
