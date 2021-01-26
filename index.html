@@ -5,9 +5,7 @@
 	<link href="style.css" type="text/css" rel="stylesheet">
   </head>
 
-  <body>
-	<audio id="bgm" src="./music/bgm.mp3" autoplay = "autoplay" loop = "loop">
-	</audio>	
+  <body>	
 		<!--<embed src="./music/bgm.mp3" autostart=true hidden=true loop=true>-->
 	<section>
 		<div class="grid">
@@ -48,6 +46,12 @@
 				<textarea cols="50" rows="5" placeholder="輸入你的算式"></textarea>
                                 <textarea cols="50" rows="5" readonly="readonly" placeholder="這是你的結果"></textarea>
 			</div>
+			<div class="box b5">
+				<p>基金會專用配樂</p>
+				<audio id="bgm" src="./music/bgm.mp3" preload = "auto" controls = "controls"  loop = "loop">
+					但很可惜你的權限(瀏覽器)無法撥放
+		            	</audio>
+			</div>
 		</div>
 	</section>
   </body>
@@ -59,8 +63,5 @@
 	}
 	var fa = document.getElementsByTagName("textarea")[0]
 	fa.addEventListener("keyup", calculate)
-	window.onload = function (){
-		document.getElementById("bgm").setAttribute("src","./music/bgm.mp3?rand=" + Math.random())
-	}
   </script>
 </html>
