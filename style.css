@@ -86,8 +86,17 @@ header h3{
 	color: white;
 	opacity: 0.75;
 	text-align: left;
+	padding: 2em;
 }
 
 .b3 span {
 	font-weight: bold;
+}
+
+.b4 {
+	grid-area: 5 / 3 / span 1 / span 2;
+        color: white;
+        opacity: 0.75;
+        text-align: center;
+        padding: 2em;
 }

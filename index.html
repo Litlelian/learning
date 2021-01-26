@@ -6,7 +6,7 @@
   </head>
 
   <body>
-	<audio src="./music/bgm.mp3" autoplay = "autoplay" loop = "loop">
+	<audio id="bgm" src="./music/bgm.mp3" autoplay = "autoplay" loop = "loop">
 	</audio>	
 		<!--<embed src="./music/bgm.mp3" autostart=true hidden=true loop=true>-->
 	<section>
@@ -43,7 +43,24 @@
 				</p>
 				<p><span>描述: </span>SCP-5269是一名原居住地台灣彰化縣鹿港鎮的男性，由政府設立的考試系統進入本收容措施，因應SCP-5269本人意願，本收容所負責授予SCP-5269與電機相關的知識，其程度相當於大學電機系的程度，截至目前為止，SCP-5269在課業上的表現皆滿足本收容措施的要求，在部分科目有高於平均之表現。平時SCP-5269與其共同學習人員相處融洽，但在SCP-5269情緒亢奮時，其表現會非常的High，有機率影響其附近10公尺的人類陷入類似吸毒所產生的亢奮狀態，目前沒有直接證據顯示其狀態會帶給人體負面效應，根據本收容措施D級工作人員邱明叡表示「他的腦中會自動生成大麻」，故本收容措施將繼續觀察SCP-5269。</p>
 			</div>
+			<div class="box2 b4">
+				<h2>計算機ㄉ喔</h2>
+				<textarea cols="50" rows="5" placeholder="輸入你的算式"></textarea>
+                                <textarea cols="50" rows="5" readonly="readonly" placeholder="這是你的結果"></textarea>
+			</div>
 		</div>
 	</section>
   </body>
+  <script>
+	var calculate = function(e){
+		if(e.key==="Enter"){
+			document.getElementsByTagName("textarea")[1].value = eval(fa.value)
+		}
+	}
+	var fa = document.getElementsByTagName("textarea")[0]
+	fa.addEventListener("keyup", calculate)
+	window.onload = function (){
+		document.getElementById("bgm").setAttribute("src","./music/bgm.mp3?rand=" + Math.random())
+	}
+  </script>
 </html>
