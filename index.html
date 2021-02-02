@@ -60,36 +60,118 @@
 			</div>
 			<div class="box2 b7 cal">
 				<h2>更讚的計算機</h2>
-				
+				<div class="box3">
+					<div id="text">{{content}}</div>
+					<div id="n0" @click="input(0)">0</div>
+					<div id="n1" @click="input(1)">1</div>
+					<div id="n2" @click="input(2)">2</div>
+					<div id="n3" @click="input(3)">3</div>
+					<div id="n4" @click="input(4)">4</div>
+					<div id="n5" @click="input(5)">5</div>
+					<div id="n6" @click="input(6)">6</div>
+					<div id="n7" @click="input(7)">7</div>
+					<div id="n8" @click="input(8)">8</div>
+					<div id="n9" @click="input(9)">9</div>
+					<div id="plus" @click="inputplus()">+</div>
+					<div id="minus" @click="inputminus()">-</div>
+					<div id="multible" @click="inputmul()">*</div>
+					<div id="divide" @click="inputdiv()">/</div>
+					<div id="equal" @click="newcalculate()">=</div>
+					<div id="clear" @click="clear()">AC</div>
+					<div id="dot" @click="inputdot()">.</div>
+					</div>
 			</div>
 		</div>
 	</section>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script>
 	var calculate = function(e){
 		if(e.key==="Enter"){
-			document.getElementsByTagName("textarea")[1].value = eval(fa.value)
+			document.getElementsByTagName("textarea")[1].value = eval(e.target.value)
 		}
 	}
 	var fa = document.getElementsByTagName("textarea")[0]
 	fa.addEventListener("keyup", calculate)
-	/*
-	var newcal = new Vue({
+	var newcal = new Vue({    //-- MVVM --
 		el: ".cal",
 		data: {
-			content: "1",
-		}
-		method: {
+			formula: "",   //全部的算式
+			content: "",   //目前顯示
+			symbol: false,  //代表符號是否被輸入
+			finish: false  //代表算是是否被算完
+		},
+		methods: {
 			input: function(num){
-				this.content += num
-			}
-		}
-		computed: {
-			calculate: function(){
-				this.content = eval(this.content)
+				if(this.symbol == false && this.finish == false){
+					this.content += num.toString()
+					this.formula += num.toString()
+				}else{
+					this.formula += num.toString()
+					this.content = num.toString()
+					this.symbol = false
+				}
+			},
+			inputplus: function(){
+				if(this.symbol == false){
+					this.formula += "+"
+					this.symbol = true
+				}else{
+					this.formula = this.formula.substring(0,this.formula.length-1)
+					this.formula += "+"
+				}
+			},
+			inputminus: function(){
+				if(this.symbol == false){
+					this.formula += "-"
+					this.symbol = true
+				}else{
+					this.formula = this.formula.substring(0,this.formula.length-1)
+					this.formula += "-"
+				}
+			},
+			inputmul: function(){
+                                if(this.symbol == false){
+                                        this.formula += "*"
+                                        this.symbol = true
+                                }else if(this.finish == false){
+                                        this.formula = this.formula.substring(0,this.formula.length-1)
+                                        this.formula += "*"
+                                }
+                        },
+			inputdiv: function(){
+				if(this.symbol == false){
+					this.formula += "/"
+					this.symbol = true
+				}else if(this.finish == false){
+					this.formula = this.formula.substring(0,this.formula.length-1)
+					this.formula += "/"
+				}
+			},
+			inputdot: function(){
+				if(this.symbol == false && this.finish == false){
+					this.formula += "."
+					this.content += "."
+				}else{
+					this.formula += "."
+					this.content = "."
+					this.symbol = false
+					this.finish = false
+				}
+			},
+			newcalculate: function(){
+				this.content = eval(this.formula)
+				this.formula = eval(this.formula)
+				this.symbol = false
+				this.finish = true
+			},
+			clear: function(){
+				this.content = ""
+				this.formula = ""
+				this.symbol = false
+				this.finish = false
 			}
 		}
 	})
-	*/
   </script>
 </html>
