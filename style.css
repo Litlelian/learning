@@ -31,7 +31,7 @@ header h3{
 	width: 100%;
 	display: grid;
 	grid-template-columns: 2% 25% 46% 25% 2%;
-	grid-template-rows: 20% 10% 12% 8% 10% 15% 25%;
+	grid-template-rows: 20% 10% 12% 8% 10% 15% 23% 2%;
 	z-index: 1;
 	grid-gap: 2px 3px;
 }
@@ -109,3 +109,233 @@ header h3{
         text-align: center;
 	padding: 0em;
 }
+
+.b6 {
+	grid-area: 7 / 3 / span 1 / span 1;
+	color: white;
+        opacity: 0.75;
+        text-align: center;
+        padding: 1em;
+}
+
+.b7 {
+	grid-area: 7 / 4 / span 1 / span 1;
+        color: white;
+        opacity: 0.75;
+        text-align: center;
+        padding: 1em;
+}
+
+.box3 {
+	position: absolute;
+	text-align: center;
+	justify-content: center;
+	z-index: 3;
+	height: 275px;
+	width: 250px;
+	display: grid;
+	background-color: white;
+        color: black;
+        border-radius: 3px;
+        border: 3px black solid;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.box3 #text: {
+	grid-area: 1 / 1 / sapn 1 / span 3 ;
+}
+
+.box3 #n0: {
+	grid-area: 5 / 1 / sapn 1 / span 1 ;
+}
+
+.box3 #n1: {
+	grid-area: 4 / 1 / sapn 1 / span 1 ;
+}
+
+.box3 #n2: {
+        grid-area: 4 / 2 / sapn 1 / span 1 ;
+}
+
+.box3 #n3: {
+        grid-area: 4 / 3 / sapn 1 / span 1 ;
+}
+
+.box3 #n4: {
+        grid-area: 3 / 1 / sapn 1 / span 1 ;
+}
+
+.box3 #n5: {
+        grid-area: 3 / 2 / sapn 1 / span 1 ;
+}
+
+.box3 #n6: {
+        grid-area: 3 / 3 / sapn 1 / span 1 ;
+}
+
+.box3 #n7: {
+        grid-area: 2 / 1 / sapn 1 / span 1 ;
+}
+
+.box3 #n8: {
+        grid-area: 2 / 2 / sapn 1 / span 1 ;
+}
+
+.box3 #n9: {
+        grid-area: 2 / 3 / sapn 1 / span 1 ;
+}
+
+.box3 #plus: {
+        grid-area: 1 / 4 / sapn 1 / span 1 ;
+}
+
+.box3 #minus: {
+        grid-area: 2 / 4 / sapn 1 / span 1 ;
+}
+
+.box3 #multible: {
+        grid-area: 3 / 4 / sapn 1 / span 1 ;
+}
+
+.box3 #divide: {
+        grid-area: 4 / 4 / sapn 1 / span 1 ;
+}
+
+.box3 #equal: {
+        grid-area: 5 / 3 / sapn 1 / span 1 ;
+}
+
+.box3 #clear: {
+        grid-area: 5 / 4 / sapn 1 / span 1 ;
+}
+
+.box3 #text:hover {
+
+}
+
+.box3 #n0:hover {
+
+}
+
+.box3 #n1:hover {
+
+}
+
+.box3 #n2:hover {
+
+}
+
+.box3 #n3:hover {
+
+}
+
+.box3 #n4:hover {
+
+}
+
+.box3 #n5:hover {
+
+}
+
+.box3 #n6:hover {
+
+}
+
+.box3 #n7:hover {
+
+}
+
+.box3 #n8:hover {
+
+}
+
+.box3 #n9:hover {
+
+}
+
+.box3 #plus:hover {
+
+}
+
+.box3 #minus:hover {
+
+}
+
+.box3 #multible:hover {
+
+}
+
+.box3 #divide:hover {
+
+}
+
+.box3 #equal:hover {
+
+}
+
+.box3 #text:visited {
+
+}
+
+.box3 #n0:visited {
+
+}
+
+.box3 #n1:visited {
+
+}
+
+.box3 #n2:visited {
+
+}
+
+.box3 #n3:visited {
+
+}
+
+.box3 #n4:visited {
+
+}
+
+.box3 #n5:visited {
+
+}
+
+.box3 #n6:visited {
+
+}
+
+.box3 #n7:visited {
+
+}
+
+.box3 #n8:visited {
+
+}
+
+.box3 #n9:visited {
+
+}
+
+.box3 #plus:visited {
+
+}
+
+.box3 #minus:visited {
+
+}
+
+.box3 #multible:visited {
+
+}
+
+.box3 #divide:visited {
+
+}
+
+.box3 #equal:visited {
+
+}
+
+
